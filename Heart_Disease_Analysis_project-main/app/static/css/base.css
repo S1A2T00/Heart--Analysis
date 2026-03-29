@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6fb;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background: graytint(rgba(255, 255, 255, 0), 90%);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;   
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: #3a4fd7;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 19px;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.1s ease;
+}
+
+.nav-links a:hover {
+    color: #4b5bdc;
+}
+
+.nav-links a.btn {
+    background: #4b5bdc;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a.btn:hover {
+    background: #3a4fd7;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(75, 91, 220, 0.3);
+}

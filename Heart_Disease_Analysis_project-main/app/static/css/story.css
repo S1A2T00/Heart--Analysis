@@ -1,0 +1,32 @@
+.story-section {
+    width: 100%;
+    max-width: 1500px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.story-section h1 {
+    font-size: clamp(24px, 4vw, 32px);
+}
+
+.story-section p {
+    font-size: clamp(16px, 2.5vw, 20px);
+    line-height: 1.6;
+}
+
+.story-content {
+    margin-bottom: 50px;
+}
+
+.tableau-wrapper {
+    width: 100%;
+}
+
+.tableau-wrapper object,
+.tableau-wrapper iframe {
+    width: 100% !important;
+}
+
+body {
+    margin: 0;
+}

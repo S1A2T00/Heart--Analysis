@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+{% block content %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/get_started.css') }}">
+
+<div class="main-container">
+
+<h1 class="page-title">Heart Disease Risk Prediction</h1>
+
+<div class="layout">
+
+<!-- LEFT PANEL -->
+ 
+<div class="card feature-card">
+
+<h3>Select Factors</h3>
+
+<div class="feature-list">
+
+<!-- Binary Features -->
+
+{% for feature in binary_features %}
+
+<div class="feature-item">
+
+<label>{{ feature }}</label>
+
+<input
+type="checkbox"
+class="feature-input"
+data-feature="{{ feature }}"
+>
+
+</div>
+
+{% endfor %}
+
+
+<!-- Numeric Features -->
+
+{% for feature in numeric_features %}
+
+<div class="feature-item">
+
+<label>{{ feature }}</label>
+
+<input
+type="number"
+step="any"
+placeholder="Enter value"
+class="feature-input"
+data-feature="{{ feature }}"
+>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+<button id="predictBtn" class="primary-btn">
+Predict Risk
+</button>
+
+</div>
+
+
+<!-- CENTER RISK CARD -->
+
+<div class="card risk-card">
+
+<h3>YOUR HEART RISK</h3>
+
+<div class="gauge">
+
+<div class="gauge-inner">
+
+<h2 id="riskPercent">0%</h2>
+<p id="riskLevel">Low</p>
+
+</div>
+
+</div>
+
+<p class="risk-note">Based on your inputs</p>
+
+</div>
+
+
+<!-- RIGHT PANEL -->
+
+<div class="card improvement-card">
+
+<h3>IMPROVE YOUR RISK</h3>
+
+<div class="histogram">
+
+<div class="bar-container">
+
+    <span class="percent-text" id="currentPercent">0%</span>
+
+    <div class="bar current-bar" id="currentBar"></div>
+
+    <small>Current</small>
+
+</div>
+
+
+<div class="bar-container">
+
+    <span class="percent-text" id="improvedPercent">0%</span>
+
+    <div class="bar improved-bar" id="improvedBar"></div>
+
+    <small>After Improvement</small>
+
+</div>
+
+</div>
+
+<h4 id="reductionText"></h4>
+
+<div id="insightText"></div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/risk.js') }}"></script>
+
+{% endblock %}

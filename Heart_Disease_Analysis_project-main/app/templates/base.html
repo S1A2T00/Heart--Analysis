@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Heart Analysis{% endblock %}</title>
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+
+    <!-- Page CSS -->
+    {% block css %}{% endblock %}
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">Heart Analysis</div>
+    <ul class="nav-links">
+        <li><a href="/" class="{% if request.path == '/' %}active{% endif %}">Home</a></li>
+         <li><a href="/about" class="{% if request.path == '/about' %}active{% endif %}">About</a></li>
+         <li><a href="/dashboard" class="{% if request.path == '/dashboard' %}active{% endif %}">Dashboard</a></li>
+         <li><a href="/story" class="{% if request.path == '/story' %}active{% endif %}">Story</a></li>
+         <li><a href="/contact" class="{% if request.path == '/contact' %}active{% endif %}">Contact</a></li>
+        <li><a class="btn" href="/get_started">Get Started</a></li>
+    </ul>
+</nav>
+
+{% block content %}{% endblock %}
+
+</body>
+</html>
