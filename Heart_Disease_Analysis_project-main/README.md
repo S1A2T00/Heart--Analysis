@@ -155,6 +155,7 @@ This helps users understand how lifestyle changes can significantly influence ca
 
 Python
 
+
 ### Machine Learning
 
 Scikit-learn
@@ -220,11 +221,11 @@ Possible future enhancements include:
 
 ## 👨‍💻 Author
 
-### Saqib Khan
+### Satyam Pandey
 
 ## 👥 Team Members
 
-### Satyam Pandey
+### Saqib Khan
 ### Shakib Khan
 ### Satyam Shrivastav
 
